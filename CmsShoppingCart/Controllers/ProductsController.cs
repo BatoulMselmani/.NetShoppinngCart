@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,6 +14,7 @@ namespace CmsShoppingCart.Controllers
     public class ProductsController : Controller
     {
         private readonly CmsShoppingCartContext context;
+
         public ProductsController(CmsShoppingCartContext context)
         {
             this.context = context;
@@ -25,7 +27,7 @@ namespace CmsShoppingCart.Controllers
             var products = context.Products.OrderByDescending(x => x.Id)
                                         .Skip((p - 1) * pageSize)
                                          .Take(pageSize);
-                                      
+
             ViewBag.PageNumber = p;
             ViewBag.PageRange = pageSize;
             ViewBag.TotalPages = (int)Math.Ceiling((decimal)context.Products.Count() / pageSize);
@@ -35,15 +37,15 @@ namespace CmsShoppingCart.Controllers
 
         //GET /products/category
 
-        public async Task<IActionResult> ProductByCategory(string categorySlug,int p = 1)
+        public async Task<IActionResult> ProductByCategory(string categorySlug, int p = 1)
         {
             Category category = await context.Categories.Where(x => x.Slug == categorySlug).FirstOrDefaultAsync();
-            if(category == null)
+            if (category == null)
             {
-               return RedirectToAction("Index");
+                return RedirectToAction("Index");
             }
-            
-            
+
+
             int pageSize = 4;
             var products = context.Products.OrderByDescending(x => x.Id)
                                         .Where(x => x.CategoryId == category.Id)
@@ -58,5 +60,28 @@ namespace CmsShoppingCart.Controllers
 
             return View(await products.ToListAsync());
         }
+
+        [HttpGet]
+        public IActionResult Search(string searchTerm)
+        {
+           /* if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                return View("Search", new List<Product>());
+            }*/
+
+            //var results = context.Products
+            //    .Where(results =>
+            //        results.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+            //        results.Description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+            //    .ToList();
+            //var products = context.Products.ToList();
+            var results = context.Products.Where(x => x.Name.Contains(searchTerm)).ToList();
+            return View( results);
+
+        }
+
+
+
+
     }
 }

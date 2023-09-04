@@ -27,4 +27,33 @@ function readURL(input) {
         };
         reader.readAsDataURL(input.files[0]);
     }
+
+
 }
+
+$(document).ready(function () {
+    $("#search-button").on('click', function () {
+        var searchTerm = $("#search-input").val();
+
+        $.ajax({
+            url: '/Products/Search', 
+            type: 'GET',
+            data: { searchTerm: searchTerm },
+            success: function (result) {
+                $("#search-results").html(result);
+            },
+            error: function () {
+                // Handle error
+            }
+        });
+    });
+});
+
+/*document.getElementById('search-button').addEventListener('click', function () {
+
+    const searchTerm = document.getElementById('search-input').value;
+});*/
+
+
+// Perform your search logic here
+        // You can manipulate the DOM to display search results

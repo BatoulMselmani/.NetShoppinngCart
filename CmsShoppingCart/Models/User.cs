@@ -6,6 +6,8 @@ namespace CmsShoppingCart.Models
     {
         [Required, MinLength(2, ErrorMessage = "Minimum length is 2")]
         [Display(Name ="Username")]
+
+       
         public string UserName { get; set; }
 
         [Required,EmailAddress]

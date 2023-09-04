@@ -48,7 +48,17 @@
         <tr>
             <td class="text-right" colspan="4">
                 <a asp-action="Clear" class="btn btn-danger">Clear Cart</a>
-                <a href="#" class="btn btn-primary checkout">Checkout</a>
+
+                    <form asp-controller="Order" asp-action="PlaceOrder" method="post">
+                        <label>Select Payment Method:</label><br>
+                    
+                        <a href="#" class="btn btn-primary checkout">Checkout</a>
+                        
+                        <br><br>
+                        <button type="submit" class="btn btn-primary">Place Order</button>
+                    </form>
+                     
+
             </td>
         </tr>
 
@@ -62,7 +72,7 @@ else{
 @section Scripts{
     <script>
         $(function () {
-            $("a.addToCart").click(function (e) {
+            $("a.checkout").click(function (e) {
                 e.preventDefault();
                 $("div.cartbg").removeClass("d-none");
 

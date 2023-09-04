@@ -37,7 +37,8 @@ namespace CmsShoppingCart.Areas.Admin.Controllers
             ViewBag.PageRange = pageSize;
             ViewBag.TotalPages = (int)Math.Ceiling((decimal)context.Products.Count() / pageSize);
 
-            return View(await products.ToListAsync());
+             return View(await products.ToListAsync());
+           
         }
         //GET /admin/products/create/id=5
         public IActionResult Create() {

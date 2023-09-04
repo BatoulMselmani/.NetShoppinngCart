@@ -6,6 +6,15 @@
 }
 
 <h1 class ="display-4 pb-5">All Products</h1>
+<h2>Search Results</h2>
+<div class="justify-content-end">
+    <form asp-controller="Products" asp-action="Search" method="get">
+        <input type="text" name ="searchTerm" placeholder="Search..." >
+        <button class="btn btn-primary" type ="submit">Search</button>
+
+    </form>
+
+</div>
 
 <div class="row">
     @foreach( var item in Model){
@@ -46,7 +55,7 @@ page-number="@ViewBag.PageNumber" page-range="@ViewBag.PageRange"></pagination><
     <script>
         $(function()
         {
-    $("a.addToCart").click(function(e){
+            $("a.addToCart").click(function (e) {
     e.preventDefault();
 
     let ajaxDiv = $(this).parent().parent().find("div.ajaxbg");

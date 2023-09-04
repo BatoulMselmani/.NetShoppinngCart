@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Linq;
 
 namespace CmsShoppingCart.Models
 {
@@ -29,7 +30,7 @@ namespace CmsShoppingCart.Models
                     {
                         Title = "About Us",
                         Slug = "about-us",
-                        Content = "about us page",
+                        Content = "This is our cute simple website that will help do shopping in an easy way.Hope it is useful!!",
                         Sorting = 100,
                     },
                      new Page
