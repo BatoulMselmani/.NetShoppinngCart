@@ -16,7 +16,9 @@ namespace CmsShoppingCart.InfraStructure
 
         public DbSet<Order> Orders { get; set; }
 
-        //public DbSet<SearchResult> SearchResults { get; set; }
+        public DbSet<Rate> Rates{ get; set; }
+
+        
 
 
 

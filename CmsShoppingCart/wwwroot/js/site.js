@@ -31,7 +31,8 @@ function readURL(input) {
 
 }
 
-$(document).ready(function () {
+
+/*$(document).ready(function () {
     $("#search-button").on('click', function () {
         var searchTerm = $("#search-input").val();
 
@@ -47,7 +48,7 @@ $(document).ready(function () {
             }
         });
     });
-});
+});*/
 
 /*document.getElementById('search-button').addEventListener('click', function () {
 

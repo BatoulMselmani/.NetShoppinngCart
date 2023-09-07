@@ -165,3 +165,7 @@ li.nav-item.logout {
     color: #fff;
     cursor: pointer;
 }
+
+.payment {
+    display:inline-block;
+}

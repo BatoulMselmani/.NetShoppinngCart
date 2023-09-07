@@ -46,29 +46,61 @@
 
         </tr>
         <tr>
-            <td class="text-right" colspan="4">
+            <td class="text-left" colspan="4">
                 <a asp-action="Clear" class="btn btn-danger">Clear Cart</a>
-
+                <br><br>
                     <form asp-controller="Order" asp-action="PlaceOrder" method="post">
-                        <label>Select Payment Method:</label><br>
-                    
-                        <a href="#" class="btn btn-primary checkout">Checkout</a>
-                        
-                        <br><br>
-                        <button type="submit" class="btn btn-primary">Place Order</button>
-                    </form>
-                     
+                        <label class="font-weight-bold">Select Payment Method:</label>
+                        <br>
+                        <div class="payment">
 
+                         <a href="#" class="btn btn-primary checkout">Checkout</a>
+                         
+                         <button type="submit" class="btn btn-primary">Place Order</button>
+                     </div>
+               
+                    </form>
+
+                    
+            </td>
+            <td>
+                    <div>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#rateModal">
+                            Rate Us
+                        </button>
+                    </div>
+
+                    <div class="modal fade" id="rateModal" tabindex="-1" aria-labelledby="rateModalLabel" aria-hidden="false">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="rateModalLabel">Rate Content</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/RateContent" method="post">
+                                       <!-- <input type="hidden" name="contentId" value="123" /> -->
+                                        <label for="rating">Rating:</label>
+                                        <input type="number" name="rating" min="1" max="5" />
+                                        <button type="submit" asp-controller="Cart" asp-action="RateContent">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
             </td>
         </tr>
 
    </table>
     </div>
+   
 }
 else{
     <h3 class="display-4 text-center">Your cart is empty</h3>
 }
 <partial name="~/Views/Cart/_PaypalPartial.cshtml" for="CartItems" />
+
 @section Scripts{
     <script>
         $(function () {
@@ -79,11 +111,30 @@ else{
                 $.get("/cart/clear" , {} , function(){
                     $("form.paypalform").submit();
                 })
-              
+         
+            });
+        })
+        $(function () {
+            $('#ratingInput').rating();
 
+            $('#submitRating').click(function () {
+                var contentId = @Model.CartItems;
+                var rating = $('#ratingInput').val();
 
+                $.ajax({
+                    type: 'POST',
+                    url: '/Cart/RateContent', // Replace with your controller action URL
+                    data: { contentId: contentId, rating: rating },
+                    success: function (data) {
+                        // Handle success (e.g., update average rating and number of ratings on the page)
+                    },
+                    error: function (error) {
+                        // Handle error
+                    }
+                });
             });
         });
+     
 
 
     </script>
