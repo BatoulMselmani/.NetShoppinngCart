@@ -114,27 +114,7 @@ else{
          
             });
         })
-        $(function () {
-            $('#ratingInput').rating();
-
-            $('#submitRating').click(function () {
-                var contentId = @Model.CartItems;
-                var rating = $('#ratingInput').val();
-
-                $.ajax({
-                    type: 'POST',
-                    url: '/Cart/RateContent', // Replace with your controller action URL
-                    data: { contentId: contentId, rating: rating },
-                    success: function (data) {
-                        // Handle success (e.g., update average rating and number of ratings on the page)
-                    },
-                    error: function (error) {
-                        // Handle error
-                    }
-                });
-            });
-        });
-     
+       
 
 
     </script>

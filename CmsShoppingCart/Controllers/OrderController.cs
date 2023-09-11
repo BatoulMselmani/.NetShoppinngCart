@@ -22,18 +22,18 @@ namespace CmsShoppingCart.Controllers
                 _context.Orders.Add(order);
                 _context.SaveChanges();
 
-                // You can send a confirmation email here
+                
 
-                return RedirectToAction("OrderConfirmation", new { orderId = order.Id });
+                return RedirectToAction("OrderConfirmation", new { name = order.UserName });
             }
 
-            return View("/Cart/Index"); // Return to the checkout page if there's an error
+            return View("/Cart/Index"); 
         }
-        public IActionResult OrderConfirmation(int orderId)
+        public IActionResult OrderConfirmation(string username)
         {
-            var order = _context.Orders.FirstOrDefault(o => o.Id == orderId );
-          //  var name = _context.Orders.FirstOrDefault(o => o.CustomerName == username);
-            return View(order);
+            
+            var name = _context.Orders.FirstOrDefault(o => o.UserName == username);
+            return View( name);
         }
     }
 }

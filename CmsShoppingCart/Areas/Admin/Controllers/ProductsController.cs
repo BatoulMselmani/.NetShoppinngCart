@@ -200,5 +200,31 @@ namespace CmsShoppingCart.Areas.Admin.Controllers
             }
             return View(product);
         }
+
+        public IActionResult ManageSales()
+        {
+            var products = context.Products.ToList();
+            return View(products);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateSaleStatus(int id, bool isOnSale, decimal salePrice, DateTime? saleEndDate)
+        {
+            var product = context.Products.Find(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            product.IsOnSale = isOnSale;
+            product.SalePrice = salePrice;
+            product.SaleEndDate = saleEndDate;
+
+            context.SaveChanges();
+
+            return RedirectToAction("ManageSales");
+        }
     }
+
 }
+
