@@ -1,0 +1,42 @@
+﻿@model List< Shared.Models.Product>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>On Sale</th>
+                <th>Sale Price</th>
+                <th>Sale End Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@Html.CheckBoxFor(model => product.IsOnSale)</td>
+                    <td>@Html.TextBoxFor(model => product.SalePrice)</td>
+                    <td>@Html.TextBoxFor(model => product.SaleEndDate)</td>
+                    <td>
+                    <button class ="btn btn-success" asp-controller="Products" asp-action="UpdateSaleStatus">Update</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <script>
+       $(function updateSale(name) {
+        console.log("Updating sale for product ID: " + name);
+        var isOnSale = $("#IsOnSale_" + name).is(":checked");
+        var salePrice = $("#SalePrice_" + name).val();
+        var saleEndDate = $("#SaleEndDate_" + name).val();
+
+        $.post("/Products/UpdateSaleStatus", { name: name, isOnSale: isOnSale, salePrice: salePrice, saleEndDate: saleEndDate }, function (data) {
+                location.reload(); // Refresh the page after updating
+            });
+        })
+    </script>
