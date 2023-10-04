@@ -208,9 +208,10 @@ namespace CmsShoppingCart.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateSaleStatus(int id, bool isOnSale, decimal salePrice, DateTime? saleEndDate)
+        public IActionResult UpdateSaleStatus(int Id, bool isOnSale, decimal salePrice, DateTime? saleEndDate)
         {
-            var product = context.Products.Find(id);
+            
+                var product = context.Products.Find(Id);
             if (product == null)
             {
                 return NotFound();
@@ -218,11 +219,11 @@ namespace CmsShoppingCart.Areas.Admin.Controllers
 
             product.IsOnSale = isOnSale;
             product.SalePrice = salePrice;
-            product.SaleEndDate = saleEndDate;
+           
 
             context.SaveChanges();
 
-            return RedirectToAction("ManageSales");
+            return RedirectToAction("Index");
         }
     }
 

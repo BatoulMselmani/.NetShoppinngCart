@@ -6,16 +6,16 @@
 
 
 @if (Model.CartItems.Count > 0)
-{    
-    <h1>Cart Overview</h1>
+{       <h1>Cart Overview</h1>
 
-    <div class="cartWrapper" >
+
+    <div class="cartWrapper" style="background:none">
         <div class="cartbg  d-none">
             <h3 class="text-center">Redirecting you to paypal...</h3>
             <img src="~/images/ajaxloading.gif" />
 
         </div>
-   <table class="table">
+      <table class="table">
 
        <tr>
            <th>Product</th>
@@ -32,9 +32,9 @@
                 <td>@item.Quantity</td>
                 <td>
 
-                    <a asp-action="Add" asp-route-id="@item.ProductId" class="btn btn-sm btn-primary">+</a>
-                    <a asp-action="Decrease" asp-route-id="@item.ProductId" class="btn btn-sm btn-success">-</a>
-                    <a asp-action="Remove" asp-route-id="@item.ProductId" class="btn btn-sm btn-danger">Remove</a>
+                    <a asp-action="Add" asp-route-id="@item.ProductId" class="btn btn-warning btn-sm">+</a>
+                        <a asp-action="Decrease" asp-route-id="@item.ProductId" class="btn btn-sm" style="background-color:orangered">-</a>
+                        <a asp-action="Remove" asp-route-id="@item.ProductId" class="btn btn-sm" style="background-color:dimgrey">Remove</a>
 
                 </td>
                 <td>@item.Price.ToString("C2")</td>
@@ -47,16 +47,16 @@
         </tr>
         <tr>
             <td class="text-left" colspan="4">
-                <a asp-action="Clear" class="btn btn-danger">Clear Cart</a>
+                    <a asp-action="Clear" class="btn" style="background-color:dimgrey">Clear Cart</a>
                 <br><br>
                     <form asp-controller="Order" asp-action="PlaceOrder" method="post">
                         <label class="font-weight-bold">Select Payment Method:</label>
                         <br>
                         <div class="payment">
 
-                         <a href="#" class="btn btn-primary checkout">Checkout</a>
+                         <a href="#" class="btn btn-danger checkout">Checkout</a>
                          
-                         <button type="submit" class="btn btn-primary">Place Order</button>
+                         <button type="submit" class="btn btn-danger">Place Order</button>
                      </div>
                
                     </form>
@@ -65,7 +65,7 @@
             </td>
             <td>
                     <div>
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#rateModal">
+                        <button type="button" class="btn" style="background-color:lightgray" data-bs-toggle="modal" data-bs-target="#rateModal">
                             Rate Us
                         </button>
                     </div>
@@ -92,9 +92,9 @@
             </td>
         </tr>
 
-   </table>
-    </div>
-   
+       </table>
+     </div>
+    
 }
 else{
     <h3 class="display-4 text-center">Your cart is empty</h3>

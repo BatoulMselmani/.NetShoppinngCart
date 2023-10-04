@@ -4,10 +4,10 @@
     ViewData["Title"] = "Create a Page";
 }
 
-<h1>Create a Page</h1>
+<h1 class="col-md-4 offset-md-2">Create a Page</h1>
 
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-4 offset-md-2">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
            
@@ -35,10 +35,19 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 
+ 
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <script>
-      CKEDITOR.replace("Content");
+        $("#ImageUpload").change(function () {
+            readURL(this);
+        }
+        )
+        CKEDITOR.replace('Content');
     </script>
 }
 

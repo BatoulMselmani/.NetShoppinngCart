@@ -1,7 +1,101 @@
-﻿
+﻿@model Order
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Form</title>
+    <style>
+       
 
-<h2>Order Confirmation</h2>
-<p>
-   Dear @User.Identity.Name , your order @Model.Name has been received.</p> <br>
- <p>It will be delivered within 7-10 days.</p>
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form {
+    margin: 0 auto;
+    text-align: left;
+}
+
+    </style>
+</head>
+<body>
+    <h2>Customer Information Form</h2>
+    <div class="row">
+        <div class="col-md-5">
+            <form asp-action="PlaceOrder">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+               
+                <div class="form-group">
+                    <label asp-for="UserName" class="control-label"></label>
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ProductName" class="control-label"></label>
+                    <input asp-for="ProductName" class="form-control" />
+                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhoneNumber" class="control-label"></label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
+
 

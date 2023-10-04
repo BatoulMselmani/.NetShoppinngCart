@@ -4,15 +4,15 @@
     ViewData["Title"] = "Roles";
 }
 
-<h1>Roles</h1>
+<h1 class="col-md-4 offset-md-2">Roles</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="col-md-4 offset-md-2">Create New</a>
 </p>
-<table class="table" >
+<table class="table col-md-6 offset-md-2">
     <thead>
      <tr>
-         <th>Id</th>
+
          <th>Role</th>
          <th>Users</th>
          <th></th>
@@ -23,9 +23,7 @@
     <tbody>
 @foreach (var role in Model) {
         <tr >
-            <td>
-              @role.Id
-            </td>
+            
             <td>
                 @role.Name
             </td>

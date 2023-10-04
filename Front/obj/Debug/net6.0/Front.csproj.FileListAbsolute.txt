@@ -72,3 +72,4 @@ C:\Users\pc hp\source\repos\.NetShoppinngCart\Front\obj\Debug\net6.0\refint\Fron
 C:\Users\pc hp\source\repos\.NetShoppinngCart\Front\obj\Debug\net6.0\Front.pdb
 C:\Users\pc hp\source\repos\.NetShoppinngCart\Front\obj\Debug\net6.0\Front.genruntimeconfig.cache
 C:\Users\pc hp\source\repos\.NetShoppinngCart\Front\obj\Debug\net6.0\ref\Front.dll
+C:\Users\pc hp\source\repos\.NetShoppinngCart\Front\obj\Debug\net6.0\Front.MvcApplicationPartsAssemblyInfo.cs

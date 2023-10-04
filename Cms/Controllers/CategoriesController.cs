@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Cms.Controllers
 {
-    [Authorize(Roles = "admin")]
-    [Area("Admin")]
+   // [Authorize(Roles = "admin")]
+    //[Area("Admin")]
     public class CategoriesController : Controller
     {
         private readonly CmsShoppingCartContext context;

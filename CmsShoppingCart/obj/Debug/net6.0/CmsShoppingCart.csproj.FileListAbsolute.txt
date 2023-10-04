@@ -246,3 +246,5 @@ C:\Users\pc hp\source\repos\.NetShoppinngCart\CmsShoppingCart\obj\Debug\net6.0\r
 C:\Users\pc hp\source\repos\.NetShoppinngCart\CmsShoppingCart\obj\Debug\net6.0\CmsShoppingCart.pdb
 C:\Users\pc hp\source\repos\.NetShoppinngCart\CmsShoppingCart\obj\Debug\net6.0\CmsShoppingCart.genruntimeconfig.cache
 C:\Users\pc hp\source\repos\.NetShoppinngCart\CmsShoppingCart\obj\Debug\net6.0\ref\CmsShoppingCart.dll
+C:\Users\pc hp\source\repos\.NetShoppinngCart\CmsShoppingCart\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\pc hp\source\repos\.NetShoppinngCart\CmsShoppingCart\obj\Debug\net6.0\scopedcss\projectbundle\CmsShoppingCart.bundle.scp.css

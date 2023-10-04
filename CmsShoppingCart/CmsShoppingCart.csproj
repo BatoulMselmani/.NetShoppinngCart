@@ -6,6 +6,46 @@
 
   <ItemGroup>
     <Content Remove="Views\Search\Search.cshtml" />
+    <Content Remove="wwwroot\js\cart.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\cart.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\cart.js" />
+    <None Include="wwwroot\metronic\js\custom\account\api-keys\api-keys.js" />
+    <None Include="wwwroot\metronic\js\custom\account\billing\general.js" />
+    <None Include="wwwroot\metronic\js\custom\account\referrals\referral-program.js" />
+    <None Include="wwwroot\metronic\js\custom\account\security\license-usage.js" />
+    <None Include="wwwroot\metronic\js\custom\account\security\security-summary.js" />
+    <None Include="wwwroot\metronic\js\custom\account\settings\deactivate-account.js" />
+    <None Include="wwwroot\metronic\js\custom\account\settings\profile-details.js" />
+    <None Include="wwwroot\metronic\js\custom\account\settings\signin-methods.js" />
+    <None Include="wwwroot\metronic\js\custom\apps\chat\chat.js" />
+    <None Include="wwwroot\metronic\js\custom\pages\user-profile\general.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\create-app.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\new-address.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\new-card.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\offer-a-deal\complete.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\offer-a-deal\details.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\offer-a-deal\finance.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\offer-a-deal\main.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\offer-a-deal\type.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\two-factor-authentication.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\upgrade-plan.js" />
+    <None Include="wwwroot\metronic\js\custom\utilities\modals\users-search.js" />
+    <None Include="wwwroot\metronic\js\custom\widgets.js" />
+    <None Include="wwwroot\metronic\js\scripts.bundle.js" />
+    <None Include="wwwroot\metronic\js\widgets.bundle.js" />
+    <None Include="wwwroot\metronic\plugins\custom\datatables\datatables.bundle.js" />
+    <None Include="wwwroot\metronic\plugins\global\fonts\%40fortawesome\fa-brands-400.woff2" />
+    <None Include="wwwroot\metronic\plugins\global\fonts\%40fortawesome\fa-regular-400.woff2" />
+    <None Include="wwwroot\metronic\plugins\global\fonts\%40fortawesome\fa-solid-900.woff2" />
+    <None Include="wwwroot\metronic\plugins\global\fonts\%40fortawesome\fa-v4compatibility.woff2" />
+    <None Include="wwwroot\metronic\plugins\global\fonts\bootstrap-icons\bootstrap-iconse52a.woff2" />
+    <None Include="wwwroot\metronic\plugins\global\plugins.bundle.js" />
   </ItemGroup>
 
   <ItemGroup>

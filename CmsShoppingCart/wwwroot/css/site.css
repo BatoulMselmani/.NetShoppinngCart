@@ -105,9 +105,10 @@ div.ajaxbg > img {
         z-index: 2;
     }
 
-    div.cartWrapper {
-        position: relative;
-    }
+div.cartWrapper {
+    position: relative;
+    
+}
 div.cartbg {
     background: rgba(255,255,255,.8);
     position: absolute;
@@ -169,3 +170,49 @@ li.nav-item.logout {
 .payment {
     display:inline-block;
 }
+
+
+
+body {
+    background-image: url(../images/5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+.bg-custom {
+    background-color: orangered; 
+    
+}
+.list-group{
+    top: 50px;
+}
+.search {
+    color: black;
+}
+
+.table{
+    background-color: transparent;
+    border-collapse: collapse;
+    border:none;
+   
+    opacity:0.8;
+}
+
+
+
+
+/* CSS for the product container */
+/*.product-container {
+    max-height: 400px; /* Adjust the maximum height as needed */
+overflow-y: auto;
+border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+}
+*/
+/* Style for individual product cards (adjust as needed) */
+ /*.product-card {
+    margin-bottom: 20px; /* Spacing between product cards */
+    /* Add other styles for your product cards */
+}*/
+
+

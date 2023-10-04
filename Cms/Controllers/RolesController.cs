@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace Cms.Controllers
 {
-    [Authorize(Roles = "admin")]
-    [Area("Admin")]
+    //[Authorize(Roles = "admin")]
+    //[Area("Admin")]
     public class RolesController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;

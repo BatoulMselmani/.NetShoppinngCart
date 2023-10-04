@@ -72,3 +72,4 @@ C:\Users\pc hp\source\repos\.NetShoppinngCart\Cms\obj\Debug\net6.0\refint\Cms.dl
 C:\Users\pc hp\source\repos\.NetShoppinngCart\Cms\obj\Debug\net6.0\Cms.pdb
 C:\Users\pc hp\source\repos\.NetShoppinngCart\Cms\obj\Debug\net6.0\Cms.genruntimeconfig.cache
 C:\Users\pc hp\source\repos\.NetShoppinngCart\Cms\obj\Debug\net6.0\ref\Cms.dll
+C:\Users\pc hp\source\repos\.NetShoppinngCart\Cms\obj\Debug\net6.0\Cms.MvcApplicationPartsAssemblyInfo.cs

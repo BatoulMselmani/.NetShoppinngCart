@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+<h1>Product Details</h1>
+<input type="hidden" id="product-id" value="1">
+<input type="hidden" id="product-price" value="100.00">
+
+<p>Product Price: $<span id="displayed-price">100.00</span></p>
+
+<label for="discount-code-input">Enter Discount Code:</label>
+<input type="text" id="discount-code-input">
+
+<button id="add-to-cart-button">Add to Cart</button>
+
+@section scripts {
+    
+    $(document).ready(function () {
+    $("#add-to-cart-button").click(function () {
+        var productId = $("#product-id").val();
+        var productPrice = parseFloat($("#product-price").val());
+        var discountCode = $("#discount-code-input").val().trim();
+
+        // Send an AJAX request to the server to add the product to the cart
+        $.ajax({
+            type: "POST",
+            url: "/Cart/AddToCart",
+            data: {
+                productId: productId,
+                productPrice: productPrice,
+                discountCode: discountCode
+            },
+            success: function (data) {
+                if (data.success) {
+                    alert(data.message);
+
+                    // Update the product price on the page
+                    var finalPrice = data.finalPrice;
+                    $("#product-price").val(finalPrice.toFixed(2));
+                } else {
+                    alert("Failed to add product to cart.");
+                }
+            },
+            error: function () {
+                alert("An error occurred while adding the product to the cart.");
+            }
+        });
+    });
+});
+}

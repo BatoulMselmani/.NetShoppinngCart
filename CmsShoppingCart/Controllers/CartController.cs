@@ -59,6 +59,27 @@ namespace CmsShoppingCart.Controllers
 
            
         }
+        [HttpPost]
+        public JsonResult Discount( decimal productPrice, string discountCode)
+        {
+            // Check if a discount code is provided
+            decimal discount = 0;
+
+            // Apply a discount if a valid code is provided (you can implement a discount code validation logic here)
+            if (discountCode == "DISCOUNT")
+            {
+                discount = 10; // Example: 10% discount
+            }
+
+            // Calculate the final price after applying the discount
+            decimal finalPrice = productPrice - (productPrice * discount / 100);
+
+            // Add the product to the cart with the final price
+            // You should implement your own cart logic here
+
+            return Json(new { success = true, message = "Product added to cart.", finalPrice });
+        }
+
         //GET /cart/decrease/id
         public IActionResult Decrease(int id)
         {

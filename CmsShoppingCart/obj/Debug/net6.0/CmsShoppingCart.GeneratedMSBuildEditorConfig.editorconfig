@@ -75,12 +75,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc hp/source/repos/.NetShoppinngCart/CmsShoppingCart/Areas/Admin/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+[C:/Users/pc hp/source/repos/.NetShoppinngCart/CmsShoppingCart/Areas/Admin/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/pc hp/source/repos/.NetShoppinngCart/CmsShoppingCart/Areas/Admin/Views/Shared/_NotificationPartail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc hp/source/repos/.NetShoppinngCart/CmsShoppingCart/Areas/Admin/Views/Shared/_SideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9TaWRlQmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/pc hp/source/repos/.NetShoppinngCart/CmsShoppingCart/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -127,6 +131,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/pc hp/source/repos/.NetShoppinngCart/CmsShoppingCart/Views/Products/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/pc hp/source/repos/.NetShoppinngCart/CmsShoppingCart/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -170,3 +178,7 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/pc hp/source/repos/.NetShoppinngCart/CmsShoppingCart/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc hp/source/repos/.NetShoppinngCart/CmsShoppingCart/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-e0tmteol8q

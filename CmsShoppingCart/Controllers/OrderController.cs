@@ -31,9 +31,9 @@ namespace CmsShoppingCart.Controllers
         }
         public IActionResult OrderConfirmation(string username)
         {
-            
+
             var name = _context.Orders.FirstOrDefault(o => o.UserName == username);
-            return View( name);
+            return View(name);
         }
     }
 }

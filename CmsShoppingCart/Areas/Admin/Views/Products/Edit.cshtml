@@ -4,11 +4,11 @@
     ViewData["Title"] = "Edit Product";
 }
 
-<h1>Edit Product</h1>
+<h1 class="col-md-4 offset-md-2">Edit Product</h1>
 
 
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-4 offset-md-2">
         <form asp-action="Edit" enctype ="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Image" />

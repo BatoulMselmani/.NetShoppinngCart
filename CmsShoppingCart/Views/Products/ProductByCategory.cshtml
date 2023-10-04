@@ -5,8 +5,16 @@
     ViewData["Title"] = "Products";
 }
 
-<h1 class ="display-4 pb-5">@ViewBag.CategoryName</h1>
-
+<h1 class="display-4 pb-5"><strong>@ViewBag.CategoryName</strong></h1>
+<div class="row">
+    <div class="col-12">
+        <div class="btn-group mb-3">
+            <label class="mr-2">Sort by: </label>
+            <a href="/products?categorySlug=@ViewBag.CategorySlug&sortOrder=price_asc" class="btn btn-outline-warning">Price Ascending</a>
+            <a href="/products?categorySlug=@ViewBag.CategorySlug&sortOrder=price_desc" class="btn btn-outline-warning">Price Descending</a>
+        </div>
+    </div>
+</div>
 <div class="row">
     @foreach( var item in Model){
         <div class="col-6">
@@ -25,7 +33,7 @@
             </p>
             <p>
                     <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id" 
-                    data-id="@item.Id" class="btn btn-primary addToCart">Add to cart</a>
+                    data-id="@item.Id" class="btn btn-warning addToCart">Add to cart</a>
             </p>
 
 

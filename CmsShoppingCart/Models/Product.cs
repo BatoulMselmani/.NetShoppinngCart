@@ -20,9 +20,7 @@ namespace CmsShoppingCart.Models
 
         public bool IsOnSale { get; set; }
         public decimal SalePrice { get; set; }
-        public DateTime? SaleEndDate { get; set; }
-
-
+        //public DateTime? SaleEndDate { get; set; }
 
 
         [Display(Name ="Category")]
