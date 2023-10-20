@@ -121,7 +121,10 @@ namespace CmsShoppingCart.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("PaymentMethod")
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductName")
@@ -189,9 +192,6 @@ namespace CmsShoppingCart.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(10,2)");
-
-                    b.Property<DateTime?>("SaleEndDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<decimal>("SalePrice")
                         .HasColumnType("decimal(18,2)");

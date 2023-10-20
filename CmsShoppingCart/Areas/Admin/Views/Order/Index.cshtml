@@ -1,0 +1,47 @@
+﻿@model List<Order>
+<div class="container" style="position: absolute; top:100px">
+<h1 class="col-md-3 offset-md-2">Customers Order</h1>
+
+<table class="table sorting col-md-3 offset-md-2">
+    <thead>
+        <tr>
+                <th><h2>Order ID</h2></th>
+                <th><h2>Customer Name</h2></th>
+                <th><h2>Product Name</h2> </th>
+                <th><h2>Phone Number</h2></th>
+                <th><h2>Address</h2></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.UserName</td>
+                <td>@order.ProductName</td>
+                <td>@order.PhoneNumber</td>
+                <td>@order.Address</td>
+               <td> <a class="confirmDeletion"  asp-asp-controller="Order" asp-action="Delete" asp-route-id="@order.Id">Delete</a> </td>
+            </tr>
+            
+        }
+    </tbody>
+</table>
+</div>
+<script>
+    $(function () {
+        if ($("a.confirmDeletion").length) {
+            $("a.confirmDeletion").click(() => {
+                if (!confirm("Confirm deletion")) return false;
+            });
+        }
+
+        if ($("div.alert.notification").length) {
+            setTimeout(() => {
+                $("div.alert.notification").fadeOut();
+
+            }, 2000);
+        }
+    });
+
+</script>

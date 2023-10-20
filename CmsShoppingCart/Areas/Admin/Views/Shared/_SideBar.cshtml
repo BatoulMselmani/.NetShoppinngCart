@@ -1,9 +1,17 @@
-﻿<section>
-	<div id="kt_app_sidebar" class="app-sidebar  flex-column "
+﻿<section class="sidebar">
+	<div id="kt_app_sidebar" class="app-sidebar flex-column "
 		 data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
 		<div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
 			<a asp-controller="Products" asp-action="Index">
-				CmsShoppingCart
+				<img style="
+            width: 120px; 
+            height: auto; 
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            border: 2px solid #000; 
+            border-radius: 10px;/
+        " src="~/images/logo2.jpg" />
 			</a>
 			<div id="kt_app_sidebar_toggle"
 				 class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary h-30px w-30px position-absolute top-50 start-100 translate-middle rotate "
@@ -33,12 +41,23 @@
 								
 							<!--end:Menu sub-->
 						</div>
-						
+				</div>
+				<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+					<!--begin:Menu link--><span class="menu-link"><a class="menu-title btn btn-light" asp-area="" asp-controller="Products" asp-action="Index" style="text-align:center">Home</a><span class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
+				</div>
+				<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item  here show">
+					<span class="menu-link"><a class="menu-title btn btn-light" asp-area="Admin" asp-controller="Pages" asp-action="Index" style="text-align:center">Pages</a><span class="menu-arrow d-lg-none"></span></span>
+					<!--end:Menu sub-->
+				</div>
+				<!--end:Menu item--><!--begin:Menu item-->
+				<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+					<!--begin:Menu link--><span class="menu-link"><a class="menu-title btn btn-light" asp-area="Admin" asp-controller="Order" asp-action="Index" style="text-align:center">Orders</a><span class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
+				</div>
 						
 					</div>
 				</div>
 			</div>
-		</div>
+	</div>
 	
 	
 

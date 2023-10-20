@@ -201,31 +201,41 @@ namespace CmsShoppingCart.Areas.Admin.Controllers
             return View(product);
         }
 
-        public IActionResult ManageSales()
+      
+        public IActionResult EditPrice(int id)
         {
-            var products = context.Products.ToList();
-            return View(products);
+            var product = context.Products.Find(id);
+           if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
         }
 
+      
         [HttpPost]
-        public IActionResult UpdateSaleStatus(int Id, bool isOnSale, decimal salePrice, DateTime? saleEndDate)
+        [ValidateAntiForgeryToken]
+        
+        public IActionResult EditPrice(int id, [Bind("Price, IsOnSale")] Product product)
         {
-            
-                var product = context.Products.Find(Id);
-            if (product == null)
+            var existingProduct = context.Products.Find(id);
+            if (existingProduct == null)
             {
                 return NotFound();
             }
 
-            product.IsOnSale = isOnSale;
-            product.SalePrice = salePrice;
-           
+            // Update the product's properties
+            existingProduct.Price = product.Price;
+            existingProduct.IsOnSale = product.IsOnSale;
 
             context.SaveChanges();
 
             return RedirectToAction("Index");
         }
-    }
 
+
+    }
 }
+
+
 

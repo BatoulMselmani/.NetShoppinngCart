@@ -18,7 +18,7 @@ form {
     text-align: center;
 }
 h2{
-    text-align: center;
+    text-align: left;
 }
 
 label {
@@ -67,8 +67,6 @@ form {
             <form asp-action="PlaceOrder">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-
-               
                 <div class="form-group">
                     <label asp-for="UserName" class="control-label"></label>
                     <input asp-for="UserName" class="form-control" />
@@ -79,16 +77,16 @@ form {
                     <input asp-for="ProductName" class="form-control" />
                     <span asp-validation-for="ProductName" class="text-danger"></span>
                 </div>
-                <div class="form-group">
+              <div class="form-group">
                     <label asp-for="PhoneNumber" class="control-label"></label>
                     <input asp-for="PhoneNumber" class="form-control" />
                     <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-                </div>
+                  </div>
                 <div class="form-group">
                     <label asp-for="Address" class="control-label"></label>
                     <input asp-for="Address" class="form-control" />
                     <span asp-validation-for="Address" class="text-danger"></span>
-                </div>
+                  </div>
                 <div class="form-group">
                     <input type="submit" value="Submit" class="btn btn-primary" />
                 </div>

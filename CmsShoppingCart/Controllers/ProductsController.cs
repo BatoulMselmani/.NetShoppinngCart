@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CmsShoppingCart.Controllers
 {
-    [Authorize]
+  //  [Authorize]
     public class ProductsController : Controller
     {
         private readonly CmsShoppingCartContext context;
@@ -96,17 +96,7 @@ namespace CmsShoppingCart.Controllers
         [HttpGet]
         public IActionResult Search(string searchTerm)
         {
-           /* if (string.IsNullOrWhiteSpace(searchTerm))
-            {
-                return View("Search", new List<Product>());
-            }*/
-
-            //var results = context.Products
-            //    .Where(results =>
-            //        results.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
-            //        results.Description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
-            //    .ToList();
-            //var products = context.Products.ToList();
+           
             var results = context.Products.Where(x => x.Name.Contains(searchTerm)).ToList();
             return View( results);
 

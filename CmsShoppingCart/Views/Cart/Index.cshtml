@@ -6,10 +6,13 @@
 
 
 @if (Model.CartItems.Count > 0)
-{       <h1>Cart Overview</h1>
+
+{ 
+    <div class="box">  
+    <h1>Cart Overview</h1>
 
 
-    <div class="cartWrapper" style="background:none">
+    <div class="cartWrapper">
         <div class="cartbg  d-none">
             <h3 class="text-center">Redirecting you to paypal...</h3>
             <img src="~/images/ajaxloading.gif" />
@@ -93,8 +96,9 @@
         </tr>
 
        </table>
-     </div>
-    
+    </div>
+     
+    </div>
 }
 else{
     <h3 class="display-4 text-center">Your cart is empty</h3>

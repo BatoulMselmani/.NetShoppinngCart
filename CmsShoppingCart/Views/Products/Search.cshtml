@@ -18,10 +18,14 @@
             </div>
             <p>
                 @item.Price.ToString("C2")
+                    @if (item.IsOnSale)
+                    {
+                    <p><strong>On Sale </strong></p>
+                    }
             </p>
             <p>
-                <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id" 
-                data-id="@item.Id" class="btn btn-primary addToCart">Add to cart</a>
+                <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id"
+                       data-id="@item.Id" class="btn btn-warning addToCart">Add to cart</a>
             </p></div>
 
         }

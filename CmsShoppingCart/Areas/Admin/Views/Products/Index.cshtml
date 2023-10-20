@@ -7,25 +7,30 @@
 <h1 class="col-md-4 offset-md-2">Products</h1>
 
 <p>
-    <a asp-action="Create" class="col-md-4 offset-md-2">Create New</a> |
-    <a asp-controller="Products" asp-action="ManageSales" >Sales</a>
+    <a asp-action="Create" class="col-md-4 offset-md-2">Create New</a> 
+    
 </p>
 <table class="table">
     <thead>
         <tr>
             
-            <th>
-                Name
+            <th><h2>
+                Name</h2>
             </th>
            
             <th>
-                Price
+                <h2>
+                    Price
+                </h2>
             </th>
             <th>
-                Category
+                <h2>
+                    Category
+                </h2>
             </th>
             <th>
-                Image
+                <h2>
+                    Image</h2>
             </th>
             <th></th>
         </tr>
@@ -50,8 +55,10 @@
             <td>
                       <a asp-action="Edit" asp-route-id ="@item.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id ="@item.Id">Details</a> |
+
            
-                      <a class = "confirmDeletion" asp-action="Delete" asp-route-id="@item.Id">Delete</a> 
+                      <a class = "confirmDeletion" asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                    <a asp-controller="Products" asp-action="EditPrice" asp-route-id="@item.Id">Discount</a>
                     
               
             </td>
@@ -62,3 +69,20 @@
 <div class="d-flex w-100 justify-content-center"> 
 <pagination page-count="@ViewBag.TotalPages" page-target="/admin/products" 
 page-number="@ViewBag.PageNumber" page-range="@ViewBag.PageRange"></pagination></div>
+<script>
+    $(function () {
+        if ($("a.confirmDeletion").length) {
+            $("a.confirmDeletion").click(() => {
+                if (!confirm("Confirm deletion")) return false;
+            });
+        }
+
+        if ($("div.alert.notification").length) {
+            setTimeout(() => {
+                $("div.alert.notification").fadeOut();
+
+            }, 2000);
+        }
+    });
+
+</script>

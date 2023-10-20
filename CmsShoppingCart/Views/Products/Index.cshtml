@@ -41,11 +41,22 @@
             </div>
             <p>
                 @item.Price.ToString("C2")
+                    
+                        @if (item.IsOnSale)
+                        {
+                            <p><strong>On Sale </strong></p>
+                        }
+                    
             </p>
+
             <p>
                 <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id"
                    data-id="@item.Id" class="btn btn-warning addToCart" >Add to cart</a>
-                      <button type="button" class="btn" style="background-color:orangered" data-bs-toggle="modal" data-bs-target="#discountModal">
+                    
+                       
+                    
+
+                     <!-- <button type="button" class="btn" style="background-color:orangered" data-bs-toggle="modal" data-bs-target="#discountModal">
                         Discount
                     </button>
                  <form>
@@ -73,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                </form>
+                </form> -->
 
             </p>
 
