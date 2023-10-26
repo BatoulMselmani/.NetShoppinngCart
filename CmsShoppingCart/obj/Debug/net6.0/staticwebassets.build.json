@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NlOoaakzMHaUnU7fYUx6TlbRYXLBYqx/rPl73GX0kV8=",
+  "Hash": "fnf/wLEPpFZ8Q8EFMgsPiCyrdvqfjXYHPiwzmT7eVf4=",
   "Source": "CmsShoppingCart",
   "BasePath": "_content/CmsShoppingCart",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\images\\profile.png",
+      "SourceId": "CmsShoppingCart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\",
+      "BasePath": "_content/CmsShoppingCart",
+      "RelativePath": "images/profile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile.png"
     },
     {
       "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\images\\shopping.jpg",
@@ -52564,6 +52581,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\0f416a65-e257-4db1-81f9-ee89388779e4_white.jpg",
+      "SourceId": "CmsShoppingCart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\",
+      "BasePath": "_content/CmsShoppingCart",
+      "RelativePath": "media/products/0f416a65-e257-4db1-81f9-ee89388779e4_white.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\0f416a65-e257-4db1-81f9-ee89388779e4_white.jpg"
+    },
+    {
       "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\26a97bb6-4e5b-4465-a9c8-52546ad146e0_banana.jpg",
       "SourceId": "CmsShoppingCart",
       "SourceType": "Discovered",
@@ -52819,23 +52853,6 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\cf8fda22-bba3-4507-8748-ac3050d1ca44_whiteshirt.jpg"
     },
     {
-      "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\e3de1e28-64a5-471a-9091-ed96c6ff64de_whiteshirt.jpg",
-      "SourceId": "CmsShoppingCart",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\",
-      "BasePath": "_content/CmsShoppingCart",
-      "RelativePath": "media/products/e3de1e28-64a5-471a-9091-ed96c6ff64de_whiteshirt.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\media\\products\\e3de1e28-64a5-471a-9091-ed96c6ff64de_whiteshirt.jpg"
-    },
-    {
       "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\efe37163-1a7e-4b1c-a5ff-227264e79013_orange.jpg",
       "SourceId": "CmsShoppingCart",
       "SourceType": "Discovered",
@@ -52885,6 +52902,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\media\\products\\noimage.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\white.jpg",
+      "SourceId": "CmsShoppingCart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\",
+      "BasePath": "_content/CmsShoppingCart",
+      "RelativePath": "media/products/white.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\white.jpg"
     },
     {
       "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\metronic\\css\\style.bundle.css",

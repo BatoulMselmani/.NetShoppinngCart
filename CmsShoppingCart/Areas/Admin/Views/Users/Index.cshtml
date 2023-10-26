@@ -7,20 +7,23 @@
 <h1 class="col-md-3 offset-md-2">Users</h1>
 
 
-<table class="table col-md-6 offset-md-2">
-    <thead>
+    <table class="table col-md-6 offset-md-2" style="border:2px solid black; text-align:center;width:60%">
+        <thead style="border:2px solid black; color:white; background-color:orangered">
         <tr>
             
-            <th>
-                Username
+            <th> <h2>
+                        Username
+                    </h2>
             </th>
-            <th>
-                Email
+                <th>
+                    <h2>
+                        Email
+                    </h2>
             </th>
-            <th></th>
+           
         </tr>
     </thead>
-    <tbody>
+        <tbody style="border:2px solid black">
 @foreach (var item in Model) {
         <tr>
             

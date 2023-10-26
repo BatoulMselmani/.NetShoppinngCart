@@ -4,17 +4,22 @@
 @{
     ViewData["Title"] = "Products";
 }
+<style>
+    .product-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .card-size {
+        height: 300px;
+        width: 220px;
+    }
+</style>
 
 <h1 class ="display-4 pb-3"><strong>All Products</strong></h1>
-<div class="justify-content-end">
-    <form asp-controller="Products" asp-action="Search" method="get">
-        <input type="text" name ="searchTerm" placeholder="Search..." >
-        <button class="search" type ="submit">Search</button>
 
-    </form>
 
-</div>
-<br>
 <div class="row">
     <div class="col-12">
         <div class="btn-group mb-3">
@@ -25,7 +30,7 @@
     </div>
 </div>
 
-<div class="row">
+  <div class="row">
     @foreach( var item in Model) {
         <div class="col-6">
             <div class="ajaxbg d-none">
@@ -34,28 +39,31 @@
 
             </div> 
             <div class="product-container">
-            <img src ="~/media/products/@item.Image" class="img-field" alt="" />
-            <h4>@item.Name</h4>
-            <div>
+                <div class="card card-size">
+                    <img src="~/media/products/@item.Image" class="card-img-top product-image" alt="" />
+                    <div class="card-body">
+                    <h4 class="card-title">@item.Name</h4>
+                  <div class="card-text">
                 @Html.Raw(item.Description)
             </div>
-            <p>
-                @item.Price.ToString("C2")
-                    
-                        @if (item.IsOnSale)
+            <p class="cart-text">
+                @item.Price.ToString("C2") @if (item.IsOnSale)
                         {
-                            <p><strong>On Sale </strong></p>
+                            <strong>On Sale </strong>
                         }
-                    
+                  
             </p>
 
             <p>
                 <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id"
                    data-id="@item.Id" class="btn btn-warning addToCart" >Add to cart</a>
-                    
+                    </p>
                        
-                    
-
+                    </div>
+                    </div>
+                    </div>
+          </div>
+          
                      <!-- <button type="button" class="btn" style="background-color:orangered" data-bs-toggle="modal" data-bs-target="#discountModal">
                         Discount
                     </button>
@@ -69,10 +77,10 @@
                             <div class="modal-body">
                                 <form action="/Discount" method="post">
                                     <input type="hidden" id="product-id" value="1">
-                                    <input type="hidden" id="product-price" >
+                                    <input type="hidden" id="product-price" > -->
 
                                     
-                                    <p>Product Price: $<span id="displayed-price">@item.Price</span></p>
+                                <!--    <p>Product Price: $<span id="displayed-price">@item.Price</span></p>
                                     
                                     <label for="discount-code-input">Enter Discount Code:</label>
                                     <input type="text" id="discount-code-input">
@@ -86,13 +94,12 @@
                 </div>
                 </form> -->
 
-            </p>
+            
 
-
-        </div>
-        </div>
-
-    }
+            
+        
+                }
+    
     
     @if (ViewBag.TotalPages > 1)
     {

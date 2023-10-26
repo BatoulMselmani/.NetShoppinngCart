@@ -32,6 +32,7 @@ function readURL(input) {
 }
 
 
+
 /*$(document).ready(function () {
     $("#search-button").on('click', function () {
         var searchTerm = $("#search-input").val();

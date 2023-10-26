@@ -1,18 +1,19 @@
 ﻿@model List<Order>
 <div class="container" style="position: absolute; top:100px">
-<h1 class="col-md-3 offset-md-2">Customers Order</h1>
+<h1 class="col-md-2 offset-md-2">Customers Order</h1>
 
-<table class="table sorting col-md-3 offset-md-2">
-    <thead>
+    <table class="table sorting col-md-2 offset-md-2" style="border:2px solid black; text-align:center;width:70%">
+        <thead style="border:2px solid black;  background-color:orangered">
         <tr>
                 <th><h2>Order ID</h2></th>
                 <th><h2>Customer Name</h2></th>
                 <th><h2>Product Name</h2> </th>
                 <th><h2>Phone Number</h2></th>
                 <th><h2>Address</h2></th>
+                <th></th>
         </tr>
     </thead>
-    <tbody>
+        <tbody style="border:2px solid black">
         @foreach (var order in Model)
         {
             <tr>

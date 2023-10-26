@@ -4,7 +4,18 @@
 @{
     ViewData["Title"] = "Products";
 }
+<style>
+    .product-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
 
+    .card-size {
+        height: 300px;
+        width: 220px;
+    }
+</style>
 <h1 class="display-4 pb-5"><strong>@ViewBag.CategoryName</strong></h1>
 <div class="row">
     <div class="col-12">
@@ -16,27 +27,38 @@
     </div>
 </div>
 <div class="row">
-    @foreach( var item in Model){
+    @foreach (var item in Model)
+    {
         <div class="col-6">
             <div class="ajaxbg d-none">
                 <img src="~/images/ajaxloading.gif" />
                 <p class="lead alert alert-success text-center d-none">The product has been added!</p>
 
             </div>
-            <img src ="~/media/products/@item.Image" class="img-field" alt="" />
-            <h4>@item.Name</h4>
-            <div>
-                @Html.Raw(item.Description)
+            <div class="product-container">
+                <div class="card card-size">
+                    <img src="~/media/products/@item.Image" class="card-img-top product-image" alt="" />
+                    <div class="card-body">
+                        <h4 class="card-title">@item.Name</h4>
+                        <div class="card-text">
+                            @Html.Raw(item.Description)
+                        </div>
+                        <p class="cart-text">
+                            @item.Price.ToString("C2") @if (item.IsOnSale)
+                            {
+                                <strong>On Sale </strong>
+                            }
+
+                        </p>
+
+                        <p>
+                            <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id"
+                               data-id="@item.Id" class="btn btn-warning addToCart">Add to cart</a>
+                        </p>
+
+                    </div>
+                </div>
             </div>
-            <p>
-                @item.Price.ToString("C2")
-            </p>
-            <p>
-                    <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id" 
-                    data-id="@item.Id" class="btn btn-warning addToCart">Add to cart</a>
-            </p>
-
-
         </div>
 
 

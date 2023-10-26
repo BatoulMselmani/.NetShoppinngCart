@@ -8,7 +8,7 @@
 @if (Model.CartItems.Count > 0)
 
 { 
-    <div class="box">  
+    
     <h1>Cart Overview</h1>
 
 
@@ -18,7 +18,7 @@
             <img src="~/images/ajaxloading.gif" />
 
         </div>
-      <table class="table">
+      <table class="table" style="z-index:1;">
 
        <tr>
            <th>Product</th>
@@ -68,7 +68,7 @@
             </td>
             <td>
                     <div>
-                        <button type="button" class="btn" style="background-color:lightgray" data-bs-toggle="modal" data-bs-target="#rateModal">
+                        <button type="button" class="gray-button rounded" data-bs-toggle="modal" data-bs-target="#rateModal">
                             Rate Us
                         </button>
                     </div>
@@ -81,24 +81,25 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="/RateContent" method="post">
-                                       <!-- <input type="hidden" name="contentId" value="123" /> -->
+                                    <form action="RateContent" method="post">
+                                        <!-- <input type="hidden" name="contentId" value="123" /> -->
                                         <label for="rating">Rating:</label>
-                                        <input type="number" name="rating" min="1" max="5" />
+                                          <input type="number" name="rating" min="1" max="5" />
+
                                         <button type="submit" asp-controller="Cart" asp-action="RateContent">Submit</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-            </td>
-        </tr>
 
-       </table>
+                </td>
+            </tr>
+
+        </table>
     </div>
-     
-    </div>
+
+
 }
 else{
     <h3 class="display-4 text-center">Your cart is empty</h3>
@@ -120,6 +121,6 @@ else{
         })
        
 
-
+       
     </script>
 }

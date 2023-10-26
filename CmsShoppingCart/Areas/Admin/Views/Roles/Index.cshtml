@@ -9,8 +9,8 @@
 <p>
     <a asp-action="Create" class="col-md-4 offset-md-2">Create New</a>
 </p>
-<table class="table col-md-6 offset-md-2">
-    <thead>
+    <table class="table col-md-6 offset-md-2" style="border:2px solid black; text-align:center;width:60%">
+        <thead style="border:2px solid black; color:white; background-color:orangered">
      <tr>
 
                 <th>
@@ -27,7 +27,7 @@
 
      </tr>
     </thead>
-    <tbody>
+        <tbody style="border:2px solid black">
 @foreach (var role in Model) {
         <tr >
             

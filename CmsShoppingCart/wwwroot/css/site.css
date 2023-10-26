@@ -146,62 +146,32 @@ li.nav-item.logout {
     list-style:none;
 }
 
-.search-container {
-    display: flex;
-    align-items: center;
-}
-
-#search-input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 8px;
-}
-
-#search-button {
-    padding: 8px 12px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-}
 
 .payment {
     display:inline-block;
 }
 
 
-
-body {
-    background-image: url(../images/5.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-   
-}
-
 .bg-custom {
-    background-color: orangered; 
+    background-color: wheat; 
     
 }
 .list-group{
     top: 50px;
 }
-.search {
-    color: black;
+
+body {
+    background-image: url('../images/5.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+   
 }
 
-.table {
-    background-color: rgba(255,255,225, 0.4);
-    backdrop-filter: blur(10px);
-}
 
-.box {
-    background-color: rgba(255,255,225, 0.4);
-    backdrop-filter: blur(10px);
-    
-}
+
+
+
 
 /* CSS for the product container */
 /*.product-container {

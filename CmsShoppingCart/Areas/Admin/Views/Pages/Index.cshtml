@@ -9,8 +9,8 @@
 <p>
     <a asp-action="Create" class="col-md-4 offset-md-2">Create New</a>
 </p>
-<table class="table sorting col-md-4 offset-md-2" id="pages">
-    <thead>
+<table class="table sorting col-md-4 offset-md-2" id="pages" style="border:2px solid black; text-align:center;width:60%">
+        <thead style="border:2px solid black; color:white; background-color:orangered">
         <tr class="home">
             
             <th><h2>
@@ -25,7 +25,7 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+        <tbody style="border:2px solid black">
 @foreach (var item in Model) {
         <tr id="id_@item.Id" class="@item.Slug">
             <td>
