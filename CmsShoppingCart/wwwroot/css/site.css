@@ -152,21 +152,40 @@ li.nav-item.logout {
 }
 
 
-.bg-custom {
-    background-color: wheat; 
+/*.bg-custom {
+    background-color: white; 
     
-}
+}*/
 .list-group{
     top: 50px;
 }
 
-body {
+/*body {
     background-image: url('../images/5.jpg');
     background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed; 
    
 }
+*/
+html, body {
+  
+    background-image: url('../images/5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+.navbar {
+    background-color: transparent; 
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
 
 
 

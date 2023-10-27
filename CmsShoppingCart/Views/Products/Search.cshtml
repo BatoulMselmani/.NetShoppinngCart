@@ -1,6 +1,19 @@
 ﻿@model List<Product>
 
+    <style>
+    .product-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
 
+    .card-size {
+        height: 300px;
+        width: 220px;
+        margin: 10px;
+    }
+
+</style>
 
 <div id="search-results">
     @if(Model == null){
@@ -10,24 +23,32 @@
     else {
     
     @foreach (var item in Model)
-        {<div>
-               <img src ="~/media/products/@item.Image" class="img-field" alt="" />
-            <h4>@item.Name</h4>
-            <div>
+        { <div class="product-container">
+                <div class="card card-size">
+                    <img src="~/media/products/@item.Image" class="card-img-top product-image" alt="" />
+                    <div class="card-body">
+                    <h4 class="card-title">@item.Name</h4>
+                  <div class="card-text">
                 @Html.Raw(item.Description)
             </div>
-            <p>
-                @item.Price.ToString("C2")
-                    @if (item.IsOnSale)
-                    {
-                    <p><strong>On Sale </strong></p>
-                    }
+            <p class="cart-text">
+                @item.Price.ToString("C2") @if (item.IsOnSale)
+                        {
+                            <strong>On Sale </strong>
+                        }
+                  
             </p>
+
             <p>
                 <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id"
-                       data-id="@item.Id" class="btn btn-warning addToCart">Add to cart</a>
-            </p></div>
-
+                   data-id="@item.Id" class="btn btn-warning addToCart" >Add to cart</a>
+                    </p>
+                       
+                    </div>
+                    </div>
+                    </div>
+          
+          
         }
         }
 

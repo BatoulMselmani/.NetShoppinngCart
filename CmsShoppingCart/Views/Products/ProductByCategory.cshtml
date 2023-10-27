@@ -14,6 +14,7 @@
     .card-size {
         height: 300px;
         width: 220px;
+        margin: 10px;
     }
 </style>
 <h1 class="display-4 pb-5"><strong>@ViewBag.CategoryName</strong></h1>
@@ -21,8 +22,8 @@
     <div class="col-12">
         <div class="btn-group mb-3">
             <label class="mr-2">Sort by: </label>
-            <a href="/products?categorySlug=@ViewBag.CategorySlug&sortOrder=price_asc" class="btn btn-outline-warning">Price Ascending</a>
-            <a href="/products?categorySlug=@ViewBag.CategorySlug&sortOrder=price_desc" class="btn btn-outline-warning">Price Descending</a>
+            <a href="/products?categorySlug=@ViewBag.CategorySlug&sortOrder=price_asc" class="btn btn-outline-warning"><strong>Price Ascending</strong></a>
+            <a href="/products?categorySlug=@ViewBag.CategorySlug&sortOrder=price_desc" class="btn btn-outline-warning"><strong>Price Descending</strong></a>
         </div>
     </div>
 </div>
