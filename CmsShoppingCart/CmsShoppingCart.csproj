@@ -6,15 +6,9 @@
 
   <ItemGroup>
     <Content Remove="Views\Search\Search.cshtml" />
-    <Content Remove="wwwroot\js\cart.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\js\cart.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\js\cart.js" />
     <None Include="wwwroot\metronic\js\custom\account\api-keys\api-keys.js" />
     <None Include="wwwroot\metronic\js\custom\account\billing\general.js" />
     <None Include="wwwroot\metronic\js\custom\account\referrals\referral-program.js" />

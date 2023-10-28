@@ -7,8 +7,7 @@
 
 @if (Model.CartItems.Count > 0)
 
-{ 
-    
+{
     <h1>Cart Overview</h1>
 
 
@@ -18,7 +17,7 @@
             <img src="~/images/ajaxloading.gif" />
 
         </div>
-      <table class="table" style="z-index:1;">
+      <table class="table" style="z-index:1;opacity: 0.8">
 
        <tr>
            <th>Product</th>
@@ -66,40 +65,39 @@
 
                     
             </td>
-            <td>
-                    <div>
-                        <button type="button" class="gray-button rounded" data-bs-toggle="modal" data-bs-target="#rateModal">
-                            Rate Us
-                        </button>
-                    </div>
-
-                    <div class="modal fade" id="rateModal" tabindex="-1" aria-labelledby="rateModalLabel" aria-hidden="false">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="rateModalLabel">Rate Content</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="RateContent" method="post">
-                                        <!-- <input type="hidden" name="contentId" value="123" /> -->
-                                        <label for="rating">Rating:</label>
-                                          <input type="number" name="rating" min="1" max="5" />
-
-                                        <button type="submit" asp-controller="Cart" asp-action="RateContent">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </td>
+           
             </tr>
 
         </table>
+        <div>
+            <button type="button" class="gray-button rounded" data-bs-toggle="modal" data-bs-target="#rateModal" style="left:100px">
+                Rate Us
+            </button>
+        </div>
+
+        <div class="modal fade" id="rateModal" tabindex="-1" aria-labelledby="rateModalLabel" aria-hidden="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="rateModalLabel">Rate Content</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="RateContent" method="post">
+                            <!-- <input type="hidden" name="contentId" value="123" /> -->
+                            <label for="rating">Rating:</label>
+                            <input type="number" name="rating" min="1" max="5" />
+
+                            <button type="submit" asp-controller="Cart" asp-action="RateContent">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-
+ 
 }
 else{
     <h3 class="display-4 text-center">Your cart is empty</h3>

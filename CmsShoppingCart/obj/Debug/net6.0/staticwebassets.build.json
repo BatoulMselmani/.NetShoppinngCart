@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fnf/wLEPpFZ8Q8EFMgsPiCyrdvqfjXYHPiwzmT7eVf4=",
+  "Hash": "CsVPYPdkw59ukCO9r+rMtvYsThIRJngBOj2cZ87LrpE=",
   "Source": "CmsShoppingCart",
   "BasePath": "_content/CmsShoppingCart",
   "Mode": "Default",
@@ -52598,6 +52598,23 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\0f416a65-e257-4db1-81f9-ee89388779e4_white.jpg"
     },
     {
+      "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\1be7eb2c-5f8f-417a-bba5-7d04bb915cdd_blue.jpg",
+      "SourceId": "CmsShoppingCart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\",
+      "BasePath": "_content/CmsShoppingCart",
+      "RelativePath": "media/products/1be7eb2c-5f8f-417a-bba5-7d04bb915cdd_blue.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\1be7eb2c-5f8f-417a-bba5-7d04bb915cdd_blue.jpg"
+    },
+    {
       "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\26a97bb6-4e5b-4465-a9c8-52546ad146e0_banana.jpg",
       "SourceId": "CmsShoppingCart",
       "SourceType": "Discovered",
@@ -52613,23 +52630,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\media\\products\\26a97bb6-4e5b-4465-a9c8-52546ad146e0_banana.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\31d49f2a-3dab-4ab4-8235-ff1386d215e9_blueshirt.jpg",
-      "SourceId": "CmsShoppingCart",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\",
-      "BasePath": "_content/CmsShoppingCart",
-      "RelativePath": "media/products/31d49f2a-3dab-4ab4-8235-ff1386d215e9_blueshirt.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\media\\products\\31d49f2a-3dab-4ab4-8235-ff1386d215e9_blueshirt.jpg"
     },
     {
       "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\34a7482f-89e1-4e92-a5e5-2e731901be66_orange.jpg",
@@ -52817,6 +52817,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\media\\products\\bed28a4d-9f4c-4970-a154-3357c94a7d75_grapes.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\blue.jpg",
+      "SourceId": "CmsShoppingCart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\",
+      "BasePath": "_content/CmsShoppingCart",
+      "RelativePath": "media/products/blue.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\blue.jpg"
     },
     {
       "Identity": "C:\\Users\\pc hp\\source\\repos\\.NetShoppinngCart\\CmsShoppingCart\\wwwroot\\media\\products\\cbb6259e-d0c2-4979-a506-22a3be43c616_redshirt.jpg",
