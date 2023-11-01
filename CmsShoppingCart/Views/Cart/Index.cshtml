@@ -51,18 +51,19 @@
             <td class="text-left" colspan="4">
                     <a asp-action="Clear" class="btn" style="background-color:dimgrey">Clear Cart</a>
                 <br><br>
+
+                    
                     <form asp-controller="Order" asp-action="PlaceOrder" method="post">
                         <label class="font-weight-bold">Select Payment Method:</label>
                         <br>
+                      
                         <div class="payment">
-
-                         <a href="#" class="btn btn-danger checkout">Checkout</a>
-                         
                          <button type="submit" class="btn btn-danger">Place Order</button>
                      </div>
                
                     </form>
-
+                    <br>
+                    <a href="#" class="btn btn-danger checkout">Checkout</a>
                     
             </td>
            
@@ -107,18 +108,17 @@ else{
 @section Scripts{
     <script>
         $(function () {
+
             $("a.checkout").click(function (e) {
                 e.preventDefault();
                 $("div.cartbg").removeClass("d-none");
 
-                $.get("/cart/clear" , {} , function(){
+                $.get("/cart/clear", {}, function () {
                     $("form.paypalform").submit();
                 })
-         
-            });
-        })
-       
 
-       
+            });
+        });
+ 
     </script>
 }

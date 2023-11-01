@@ -224,7 +224,7 @@ namespace CmsShoppingCart.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            // Update the product's properties
+            
             existingProduct.Price = product.Price;
             existingProduct.IsOnSale = product.IsOnSale;
 

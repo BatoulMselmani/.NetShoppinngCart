@@ -36,7 +36,7 @@ namespace CmsShoppingCart.Controllers
             var name = _context.Orders.FirstOrDefault(o => o.UserName == username);
             //TempData["Success"] = "Your Order has been saved !";
             return View(name);
-            TempData["Success"] = "Your Order has been saved !";
+           
         }
         
     }
